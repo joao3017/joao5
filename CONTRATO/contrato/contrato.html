@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Prestação de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contrato de Prestação de Serviços</h1>
+        <form id="contractForm">
+            <h2>Dados do Contratante</h2>
+            <label for="nomeContratante">Nome Completo</label>
+            <input type="text" id="nomeContratante" name="nomeContratante" required>
+
+            <label for="cpfContratante">CPF/CNPJ</label>
+            <input type="text" id="cpfContratante" name="cpfContratante" required>
+            <label for="endereço">Endereço</label>
+            <input type="text" id="endereço" name="endereço" required>
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            
+            <h2>Dados do Contratado</h2>
+            <label for="nomeContratada">Nome/Empresa</label>
+            <input type="text" id="nomeContratada" name="nomeContratada" required>
+
+            <label for="cpfContratada">CPF/CNPJ</label>
+            <input type="text" id="cpfContratada" name="cpfContratada" required>
+
+            <label for="enderecoContratada">Endereço</label>
+            <input type="text" id="enderecoContratada" name="enderecoContratada" required>
+
+            <h2>Detalhes do Contrato</h2>
+            <label for="descricaoServicos">Descrição dos Serviços</label>
+            <textarea id="descricaoServicos" name="descricaoServicos" rows="5" required></textarea>
+
+            <label for="valordamãodeobra">Valor da mão de obra (R$)</label>
+            <input type="number" id="valorServicos" name="valorServicos" required>
+
+            <label for="prazo">Prazo de Execução</label>
+            <input type="date" id="prazo" name="prazo" required>
+
+            <label for="condicoesPagamento">Condições de Pagamento</label>
+            <textarea id="condicoesPagamento" name="condicoesPagamento" rows="3" required></textarea>
+
+            
+
+            <button type="submit">Enviar Contrato</button>
+        </form>
+    </div>
+
+    <script>
+        // Script para capturar os dados do formulário (opcional)
+        document.getElementById("contractForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Contrato enviado com sucesso!");
+            // Aqui você pode processar os dados ou enviá-los para um servidor
+        });
+    </script>
+</body>
+</html>
